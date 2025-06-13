@@ -279,6 +279,26 @@ class AgenteFundamentadorTeorico:
         return "\n\n".join(capitulo_completo)
 
 
+class AgenteDisenoMetodologico:
+    """
+    Agente 3: Diseño Metodológico y Desarrollo Técnico (ADMDT)
+    Misión: Proponer un plan metodológico básico para el desarrollo de un proyecto.
+    """
+
+    def generar_plan(self, descripcion_proyecto: str) -> str:
+        """Genera un plan metodológico simple dado una descripción del proyecto."""
+        pasos = [
+            "1. Identificar los requerimientos técnicos y objetivos del proyecto.",
+            "2. Proponer un enfoque metodológico adecuado al alcance.",
+            "3. Definir la arquitectura de desarrollo y herramientas a emplear.",
+            "4. Establecer un plan de pruebas y evaluación técnica.",
+            "5. Documentar el proceso y resultados.",
+        ]
+        if descripcion_proyecto:
+            pasos.insert(0, f"Proyecto: {descripcion_proyecto}")
+        return "\n".join(pasos)
+
+
 # --- Lógica del Orquestador (Simulación) ---
 if __name__ == '__main__':
     # 1. Definir los inputs iniciales
